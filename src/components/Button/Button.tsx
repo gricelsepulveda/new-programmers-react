@@ -1,25 +1,25 @@
 import React from 'react'
 
-type ButtonPropsType = {
-  action: (_name: string) => void,
+type ButtonProps = {
   text: string,
   disabled: boolean,
+  action: (_name:string) => void, //TIPO PARA DEFINIR QUE VA A SER UNA FUNCION EJECUTABLE
   name: string
 }
 
-const Button:React.FunctionComponent<ButtonPropsType> = (props) => {
+const Button:React.FunctionComponent<ButtonProps> = (props) => {
 
-  const buttonTrigger = () => {
+  const funcionDelBoton = () => {
     props.action(props.name)
   }
 
   return (
     <button
-      onClick={buttonTrigger}
       name={props.name}
       disabled={props.disabled}
+      onClick={funcionDelBoton}
     >
-      {props.text != "" ? props.text : "click me"}
+      {props.text}
     </button>
   )
 }

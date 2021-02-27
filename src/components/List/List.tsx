@@ -1,24 +1,24 @@
 import React from 'react'
 
-export type ListDataType = {
-  value: string | number | any[],
+type ListProps = {
+  data: dataListType[]
+}
+
+type dataListType = {
   name: string,
-  origin: string
+  tipo: string,
+  edad: number
 }
 
-type ListPropsType = {
-  data: ListDataType[]
-}
-
-const List:React.FunctionComponent<ListPropsType> = (props) => {
+const List:React.FunctionComponent<ListProps> = (props) => {
 
   return (
     <ul>
-      { 
-        props.data.map((item, n_item) => 
-          <li key={`${n_item}-li-element`}>
-            {`${item.name}: ${item.value} (dato originado desde ${item.origin})`}
-          </li>
+      {
+        props.data.map((dato, n_item) => 
+          <li key={n_item}>
+            El nombre de la mascota es {dato.name}  y es un {dato.tipo} y tiene {dato.edad} anios
+          </li> 
         )
       }
     </ul>
