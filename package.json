@@ -1,7 +1,7 @@
 {
-  "name": "atk-piscinas",
+  "name": "new_programmers_react",
   "version": "1.0.0",
-  "description": "Piscinas grandes, pequeñas, redondas, cuadradas, personalizadas, tenemos una para ti",
+  "description": "Trabajo de inicializacion en React",
   "main": "index.js",
   "repository": "git@github.com:gricelsepulveda/atk-piscinas.git",
   "author": "hello@gricel.dev",

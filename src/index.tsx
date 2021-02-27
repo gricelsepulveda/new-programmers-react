@@ -1,9 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import Home from "./views/Home"
-import "./styles/general.scss"
 
-const App = () => <><Home/></>
+import "./styles/general.scss"
+import StarwarsView from './views/StarWars'
+
+const App = () => 
+  <>
+    <StarwarsView/>
+  </>
 
 if (module.hot) {
   module.hot.accept();
